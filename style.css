@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+/* body {
+    font-family: 'Poor Story';
+} */
+
+:root{
+    --button: rgb(25, 25, 150);
+    --hover: rgb(18, 18, 95);
+    --grey: rgb(227, 231, 231);
+}
+
+header {
+    background-image: url(./img/rizky.jpg);
+    width: 100%;
+    height: 625px;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(33, 79, 150);
+    opacity: 0.8;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* nav .list {
+    display: block;
+} */
+
+#toggler, label {
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.logo {
+    margin-left: 10px;
+    color: whitesmoke;
+}
+
+nav .list a {
+    text-decoration: none;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+nav .list a:hover {
+    background-color: rgb(0, 204, 255);
+}
+
+
+.myName {
+    margin-left: 50px;
+    margin-top: 220px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.skills-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.skill {
+    flex: 25%;
+    padding: 10px;
+    text-align: center;
+    padding: 70px;
+}
+
+.mySkills h1 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.skill img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.about .image, .me {
+    flex: 50%;
+    padding: 20px;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.about .me button {
+    border: none;
+    padding: 10px;
+    background-color: var(--button);
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.about .me p {
+    text-indent: 20px;
+    margin-top: 20px;
+}
+
+label i {
+    color: white;
+}
+
+.about .me button:hover {
+    cursor: pointer;
+    background-color: var(--hover);
+}
+
+.contact {
+    width: 50%;
+    position: relative;
+    left: 350px;
+}
+
+.contact h1 {
+    text-align: center;
+}
+
+.contact .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .form-group input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.contact .form-group input, textarea:focus {
+    border-radius: 5px;
+}
+
+.contact .form-group label {
+    font-weight: bold;
+}
+
+.contact .form-group textarea {
+    margin-bottom: 15px;
+}
+
+.contact .form-group button {
+    border: none;
+    padding: 10px;
+    background-color: var(--button);
+    border-radius: 8px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.contact .form-group button:hover {
+    cursor: pointer;
+    background-color: var(--hover);
+}
+
+footer {
+    margin-top: 50px;
+}
+
+footer .sosmed {
+    background-color: var(--grey);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .sosmed i {
+    font-size: 20px;
+    padding: 10px;
+    color: var(--button);
+}
+
+
+footer .last-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.last {
+    flex: 25%;
+    padding: 10px;
+}
+
+.last span {
+    display: block;
+}
+
+.last i {
+    font-size: 20px;
+}
+
+.last a {
+    text-decoration: none;
+    color: black;
+}
+
+.last a:hover {
+    color: var(--button);
+}
+
+footer .copy-right {
+    background-color: var(--grey);
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Media Responsive */
+@media (min-width:300px) and (max-width: 600px) {
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    label {
+        display: block;
+    }
+
+    .list a{
+        display: block;
+        text-align: center;
+    }
+
+    #toggler:checked ~ .menu {
+        max-height: 100%;
+        text-align: center;
+    }
+
+    header {
+        background-size: cover;
+        object-fit: cover;
+    }
+
+    .contact {
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about button {
+        width: 100%;
+    }
+
+    .sosmed {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .last-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
